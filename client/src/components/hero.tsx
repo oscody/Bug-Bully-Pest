@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, CheckCircle2 } from "lucide-react";
-import logo from "@assets/bug_bull_logo_1773100518118.png";
+import logo from "@assets/ChatGPT_Image_Mar_9,_2026,_08_05_58_PM_1773101171269.png";
 
 export function Hero() {
   return (

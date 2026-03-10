@@ -1,6 +1,6 @@
 import { Instagram, MapPin, Phone, Video } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
-import logo from "@assets/bug_bull_logo_1773100518118.png";
+import logo from "@assets/ChatGPT_Image_Mar_9,_2026,_08_05_58_PM_1773101171269.png";
 
 export function Footer() {
   return (
