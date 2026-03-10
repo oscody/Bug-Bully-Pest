@@ -90,14 +90,17 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "5000", 10);
+  // Use localhost in development to avoid ENOTSUP on macOS when binding to 0.0.0.0
+  const host = process.env.NODE_ENV === "development" ? "127.0.0.1" : "0.0.0.0";
+  // reusePort is Linux-only; omit in development to avoid ENOTSUP on macOS
+  const listenOptions: { port: number; host: string; reusePort?: boolean } = { port, host };
+  if (process.env.NODE_ENV !== "development") {
+    listenOptions.reusePort = true;
+  }
   httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0",
-      reusePort: true,
-    },
+    listenOptions,
     () => {
-      log(`serving on port ${port}`);
+      log(`serving at http://${host}:${port}`);
     },
   );
 })();

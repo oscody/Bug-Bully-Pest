@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import type { Server } from "http";
-import { storage } from "./storage";
+import { storage, DATABASE_NOT_CONFIGURED } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 
@@ -18,6 +18,11 @@ export async function registerRoutes(
         return res.status(400).json({
           message: err.errors[0].message,
           field: err.errors[0].path.join('.'),
+        });
+      }
+      if (err instanceof Error && err.message === DATABASE_NOT_CONFIGURED) {
+        return res.status(503).json({
+          message: "Database not configured. Contact form unavailable.",
         });
       }
       res.status(500).json({ message: "Internal server error" });
