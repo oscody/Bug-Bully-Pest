@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import flyer1 from "@assets/Screenshot_2026-03-09_at_7.33.23_PM_1773100465869.png";
-import flyer2 from "@assets/Screenshot_2026-03-09_at_7.32.58_PM_1773100470468.png";
+import flyer1 from "@assets/bug_bull_flyer_B.png";
 
 export function Gallery() {
   return (
@@ -37,16 +36,11 @@ export function Gallery() {
             transition={{ duration: 0.6 }}
             className="flex-1 relative w-full"
           >
-            <div className="relative h-[500px] w-full max-w-[500px] mx-auto">
+            <div className="relative h-[500px] w-full max-w-[500px] mx-auto flex items-center justify-center">
               <img 
                 src={flyer1} 
                 alt="Bug Bully Services Flyer" 
-                className="absolute right-4 top-0 w-3/4 rounded-xl shadow-2xl border-4 border-white/10 rotate-3 hover:rotate-0 hover:z-20 transition-all duration-500 object-cover"
-              />
-              <img 
-                src={flyer2} 
-                alt="Bug Bully Promo Flyer" 
-                className="absolute left-0 bottom-8 w-3/4 rounded-xl shadow-2xl border-4 border-white/10 -rotate-3 hover:rotate-0 hover:z-20 transition-all duration-500 object-cover"
+                className="w-3/4 rounded-xl shadow-2xl border-4 border-white/10 rotate-3 hover:rotate-0 transition-all duration-500 object-cover"
               />
             </div>
           </motion.div>
