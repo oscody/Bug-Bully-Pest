@@ -1,6 +1,7 @@
 import { Instagram, MapPin, Phone, Video } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
 import logo from "@assets/ChatGPT_Image_Mar_9,_2026,_08_05_58_PM_1773101171269.png";
+import { PHONE_NUMBER, PHONE_DISPLAY } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -31,9 +32,9 @@ export function Footer() {
             <h4 className="font-display font-bold text-xl mb-6 text-accent">Contact Info</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:5163604026" className="flex items-center gap-3 text-white/90 hover:text-accent transition-colors group">
+                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3 text-white/90 hover:text-accent transition-colors group">
                   <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="font-semibold text-lg">516-360-4026</span>
+                  <span className="font-semibold text-lg">{PHONE_DISPLAY}</span>
                 </a>
               </li>
               <li>

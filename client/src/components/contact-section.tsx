@@ -6,6 +6,7 @@ import { api } from "@shared/routes";
 import type { ContactMessageInput } from "@shared/routes";
 import { useCreateContactMessage } from "@/hooks/use-contact";
 import { useToast } from "@/hooks/use-toast";
+import { PHONE_NUMBER, PHONE_DISPLAY } from "@/lib/constants";
 
 export function ContactSection() {
   const { toast } = useToast();
@@ -64,13 +65,13 @@ export function ContactSection() {
             </p>
 
             <div className="space-y-8">
-              <a href="tel:5163604026" className="flex items-start gap-4 group">
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-start gap-4 group">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground text-lg">Call Us Directly</h4>
-                  <p className="text-muted-foreground text-xl font-medium group-hover:text-primary transition-colors">516-360-4026</p>
+                  <p className="text-muted-foreground text-xl font-medium group-hover:text-primary transition-colors">{PHONE_DISPLAY}</p>
                 </div>
               </a>
 

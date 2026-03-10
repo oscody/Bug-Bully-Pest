@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, CheckCircle2 } from "lucide-react";
 import logo from "@assets/ChatGPT_Image_Mar_9,_2026,_08_05_58_PM_1773101171269.png";
+import { PHONE_NUMBER, PHONE_DISPLAY } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -42,10 +43,10 @@ export function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
-                href="tel:5163604026" 
+                href={`tel:${PHONE_NUMBER}`}
                 className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-border text-foreground rounded-xl font-bold text-lg hover:border-primary hover:text-primary transition-all duration-300 flex items-center justify-center"
               >
-                Call 516-360-4026
+                Call {PHONE_DISPLAY}
               </a>
             </div>
 

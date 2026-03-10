@@ -3,6 +3,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Phone, Menu, X, Instagram } from "lucide-react";
 import { SiTiktok } from "react-icons/si";
 import logo from "@assets/ChatGPT_Image_Mar_9,_2026,_08_05_58_PM_1773101171269.png";
+import { PHONE_NUMBER, PHONE_DISPLAY } from "@/lib/constants";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,11 +75,11 @@ export function Navbar() {
               </a>
             </div>
             <a
-              href="tel:5163604026"
+              href={`tel:${PHONE_NUMBER}`}
               className="flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-95"
             >
               <Phone className="w-5 h-5" />
-              516-360-4026
+              {PHONE_DISPLAY}
             </a>
           </nav>
 
@@ -121,11 +122,11 @@ export function Navbar() {
               </a>
             </div>
             <a
-              href="tel:5163604026"
+              href={`tel:${PHONE_NUMBER}`}
               className="flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 py-4 mt-4 rounded-xl font-bold text-lg"
             >
               <Phone className="w-6 h-6" />
-              Call 516-360-4026
+              Call {PHONE_DISPLAY}
             </a>
           </div>
         </motion.div>
