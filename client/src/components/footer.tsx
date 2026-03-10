@@ -1,4 +1,5 @@
-import { Instagram, MapPin, Phone } from "lucide-react";
+import { Instagram, MapPin, Phone, Video } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
 import logo from "@assets/bug_bull_logo_1773100518118.png";
 
 export function Footer() {
@@ -36,9 +37,15 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/BUGBULLYPESTMANAGEMENT" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/90 hover:text-accent transition-colors group">
+                <a href="https://www.instagram.com/bug.bullypest" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/90 hover:text-accent transition-colors group">
                   <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span className="font-semibold">@BUGBULLYPESTMANAGEMENT</span>
+                  <span className="font-semibold text-lg">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@bugbullypest2" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/90 hover:text-accent transition-colors group">
+                  <SiTiktok className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span className="font-semibold text-lg">TikTok</span>
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/70">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Instagram } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
 import logo from "@assets/bug_bull_logo_1773100518118.png";
 
 export function Navbar() {
@@ -42,7 +43,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -54,6 +55,24 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://www.instagram.com/bug.bullypest" 
+                target="_blank" 
+                rel="noreferrer"
+                className={`hover:text-accent transition-colors ${isScrolled ? "text-white" : "text-foreground"}`}
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@bugbullypest2" 
+                target="_blank" 
+                rel="noreferrer"
+                className={`hover:text-accent transition-colors ${isScrolled ? "text-white" : "text-foreground"}`}
+              >
+                <SiTiktok className="w-5 h-5" />
+              </a>
+            </div>
             <a
               href="tel:5163604026"
               className="flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-95"
@@ -91,6 +110,16 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
+            <div className="flex items-center gap-6 py-4 border-b border-white/10">
+              <a href="https://www.instagram.com/bug.bullypest" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Instagram className="w-6 h-6" />
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.tiktok.com/@bugbullypest2" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <SiTiktok className="w-6 h-6" />
+                <span>TikTok</span>
+              </a>
+            </div>
             <a
               href="tel:5163604026"
               className="flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 py-4 mt-4 rounded-xl font-bold text-lg"
